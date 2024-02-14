@@ -1,0 +1,90 @@
+<div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://source.unsplash.com/500x500/?car,Audi" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://source.unsplash.com/500x500/?car,Ferrari" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="https://source.unsplash.com/500x500/?car,ford" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the
+                            card's content.</p>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// echo " This is Get And Post Variable  PHP <br>  ";
+
+        if ($_SERVER['REQUEST_METHOD'] =='POST'){
+        $_name = $_POST['car_name'];
+        $_desc = $_POST['car_desc'];
+        $_img = $_POST['car_img'];
+        
+   }
+
+
+
+// SQL query to be executed
+
+$sql = "INSERT INTO `car` ( `car_name`, `car_desc`, `car_img`, `	car_add_dt`) VALUES ('$_name', '$_desc', '$_img', current_timestamp())";
+
+$result  = mysqli_query($conn, $sql);
+
+
+while($row = mysqli_fetch_assoc($result)){
+    // echo $row['categories_id'];
+    // echo $row['categories_name'];
+    $name = $row['car_name'];
+    $desc = $row['car_desc'];
+    $img = $row['car_img'];
+    echo ' <div class="col-md-3">
+    <div class="card" style="width: 18rem;">
+        <img src='. $img .' class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">'. $name. '</h5>
+            <p class="card-text">'.$desc.'</p>
+            <a href="#" class="btn btn-primary">Read more</a>
+        </div>
+    </div>
+</div>';
+  } 
+
+  ?>

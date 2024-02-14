@@ -1,0 +1,80 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.msp {
+    /* background: url(img/contactBG.jpg)no-repeat; */
+    /* background: url(img/formBG.png)no-repeat; */
+    /* background-color: brown; */
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+}
+
+
+/* body {
+    background: url(img/contactBG.jpg)no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100vh;
+} */
+
+.form {
+    /* background: url(img/formBG.png)no-repeat; */
+    /* background-color: brown; */
+    background-size: 100% 100%;
+    width: 100%;
+    /* height: 100vh; */
+}
+
+.head {
+    background-color: rgba(246, 246, 88, 0.899);
+    border-radius: 5px;
+    margin-top: -40px;
+    /* -webkit-box-shadow: 3px -5px 5px 62px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 3px -5px 5px 62px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px -5px 5px 62px rgba(0, 0, 0, 0.2); */
+}
+
+.effect-1 {
+    border: 0;
+    outline: none;
+    width: 100%;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.effect-1~.Focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgba(246, 246, 88, 0.899);
+    transition: 0.4s;
+}
+
+.effect-1:focus~.Focus-border {
+    transition: 0.4s;
+    width: 100%;
+    left: 0;
+}
+
+.btn1 {
+    background-color: rgba(246, 246, 88, 0.899);
+    /* color: white; */
+    /* outline: none; */
+    border: none;
+    border-radius: 5px;
+    width: 145px;
+    height: 40px;
+}
+
+.btn1:hover {
+    /* -webkit-box-shadow: 3px -5px 5px 62px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 3px -5px 5px 62px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px -5px 5px 62px rgba(0, 0, 0, 0.2); */
+    background-color: skyblue;
+}
